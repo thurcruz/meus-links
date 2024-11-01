@@ -6,7 +6,7 @@
 
 :root {
   --text-color: white;
-  --bg-url: url(./assets/bg-mobile.jpg);
+  --bg-url: url(./assets/bg-back.png);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --sufarce-color: rgba(255, 255, 255, 0.1);
   --sufarce-color-houver: rgba(255, 255, 255, 0.05);
@@ -16,7 +16,7 @@
 
 .light {
   --text-color: black;
-  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --bg-url: url(./assets/bg-lightpng.png);
   --stroke-color: rgba(0, 0, 0, 0.5);
   --sufarce-color: rgba(0, 0, 0, 0.05);
   --sufarce-color-social-links: rgba(0, 0, 0, 0.1);
@@ -113,7 +113,7 @@ ul li a{
   border-radius: 8px;
   
   backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(50px);
 
   text-decoration: none;
   font-weight: 500;
@@ -131,7 +131,7 @@ display: flex;
 justify-content: center;
 
 padding: 24px 0;
-font-size: 24px;
+font-size: 32px;
 }
 
 #social-links a{
