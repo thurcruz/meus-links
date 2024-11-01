@@ -8,17 +8,17 @@
   --text-color: white;
   --bg-url: url(./assets/bg-back.png);
   --stroke-color: rgba(255, 255, 255, 0.5);
-  --sufarce-color: rgba(255, 255, 255, 0.1);
+  --sufarce-color: rgba(0, 0, 0, 0.4);
   --sufarce-color-houver: rgba(255, 255, 255, 0.05);
   --sufarce-color-social-links: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/MoonStars.svg);
 }
 
 .light {
-  --text-color: black;
+  --text-color: rgb(0, 0, 0);
   --bg-url: url(./assets/bg-lightpng.png);
   --stroke-color: rgba(0, 0, 0, 0.5);
-  --sufarce-color: rgba(0, 0, 0, 0.05);
+  --sufarce-color: rgba(255, 255, 255, 0.2);
   --sufarce-color-social-links: rgba(0, 0, 0, 0.2);
   --switch-bg-url: url(./assets/Sun.svg);
 }
@@ -74,14 +74,18 @@ body * {
   z-index: 1;
   transform: translateY(-50%);
 
-  transition: all 0.3s;
+  animation: slide-back 0.2s;
   
 }
 
-  .light #switch button {
-    left: auto;
-    right: 0;
-  }
+.light #switch button {
+    animation: slide-in 0.4s forwards;
+}
+
+#switch button:hover {
+    outline: 8px solid var(--sufarce-color-houver);
+}
+
 
 #switch span {
   display: block;
@@ -113,7 +117,7 @@ ul li a{
   border: 1px solid var(--stroke-color);
   border-radius: 8px;
   
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(4px);
 
   text-decoration: none;
@@ -140,6 +144,7 @@ font-size: 32px;
   align-items: center;
   justify-content: center;
   padding: 16px;
+  
 
   transition: background 0.2s;
   border-radius: 50px;
@@ -154,4 +159,22 @@ footer{
   padding: 24px 0px;
   text-align: center;
   font-size: 16px;
+}
+
+@keyframes slide-in {
+  from {
+    left: 0%;
+  }
+  to {
+left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+  left: 0%;
+  }
 }
